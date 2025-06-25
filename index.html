@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemini AI Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Initialize chatbot
+    window.addEventListener('load', () => {
+      console.log('Chatbot initialized');
+    });
+  </script>
+  <style>
+    .chat-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    .chat-container::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .chat-container::-webkit-scrollbar-thumb {
+      background: #64748b;
+      border-radius: 4px;
+    }
+    .chat-container::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+  <body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4">
+      <div class="bg-white rounded-2xl shadow-xl max-w-2xl mx-auto flex flex-col h-[calc(100vh-4rem)]">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-blue-500 to-indigo-600 p-4 rounded-t-2xl">
+          <h1 class="text-white text-2xl font-bold">Gemini AI Chatbot</h1>
+          <p class="text-blue-100 text-sm mt-1">Ask anything!</p>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="flex-1 overflow-y-auto p-4">
+          <div id="chatContainer" class="space-y-4">
+            <!-- Initial welcome message -->
+            <div class="flex justify-start">
+              <div class="bg-blue-100 text-blue-800 p-3 rounded-lg max-w-[80%]">
+                Hello! I'm powered by Gemini AI. How can I help you?
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="border-t border-gray-200 p-4">
+          <div class="flex gap-2">
+            <input 
+              type="text" 
+              id="userInput" 
+              placeholder="Type your message..." 
+              class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+            >
+            <button 
+              id="sendButton" 
+              class="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  
+  </body>
+  <script type="module" src="main.js"></script>
+
+</html>
